@@ -42,132 +42,163 @@
     <noscript
       ><link rel="stylesheet" href="/assets/css/noscript.css"
     /></noscript>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
     <script src="/assets/js/libs.js"></script>
     <script src="/assets/js/main.js"></script>
   </head>
-  <body class="page-item color-invert layout-normal is-loading">
+  <body class="page-item color-invert layout-normal is-loggedOut is-minimized">
     <div id="wrapper">
       <script>
         var _item = { id: "hyperbolic", baseUrl: "/items/demos/hyperbolic/" };
       </script>
-      <article id="details">
-        <div class="inner">
-          <header>
-            <a href="/" class="back">Back</a>
-            <h1>Hyperbolic</h1>
-            <p>
-              Demo images via
-              <a href="http://unsplash.com" class="offsite">Unsplash</a>.
-            </p>
-          </header>
-          <section class="properties">
-            <dl>
-              <dt data-row="category">Category</dt>
-              <dd data-row="category">Anything</dd>
-              <dt data-row="schemes">Color Schemes</dt>
-              <dd data-row="schemes">
-                <ul class="schemes">
-                  <li data-name="blue">
-                    <ul class="scheme">
-                      <li style="background-color: #4797ec">#4797ec</li>
-                      <li style="background-color: #884beb">#884beb</li>
-                      <li style="background-color: #ffffff">#ffffff</li>
-                    </ul>
-                  </li>
-                  <li data-name="green">
-                    <ul class="scheme">
-                      <li style="background-color: #31d79b">#31d79b</li>
-                      <li style="background-color: #4b76eb">#4b76eb</li>
-                      <li style="background-color: #ffffff">#ffffff</li>
-                    </ul>
-                  </li>
-                  <li data-name="orange">
-                    <ul class="scheme">
-                      <li style="background-color: #f54a6f">#f54a6f</li>
-                      <li style="background-color: #debf55">#debf55</li>
-                      <li style="background-color: #ffffff">#ffffff</li>
-                    </ul>
-                  </li>
-                </ul>
-              </dd>
-              <dt data-row="layouts">Page Layouts</dt>
-              <dd data-row="layouts">
-                <ul class="layouts">
-                  <li data-name="index">
-                    <span class="layout">Homepage</span>
-                  </li>
-                  <li data-name="generic">
-                    <span class="layout">Generic</span>
-                  </li>
-                </ul>
-              </dd>
-              <dt data-row="sizes">Device Sizes</dt>
-              <dd data-row="sizes">
-                <ul class="sizes">
-                  <li data-name="desktop">
-                    <span class="size desktop">Desktop</span>
-                  </li>
-                  <li data-name="tablet-landscape">
-                    <span class="size tablet-landscape">Tablet</span>
-                  </li>
-                  <li data-name="tablet-portrait">
-                    <span class="size tablet-portrait">Tablet (Portrait)</span>
-                  </li>
-                  <li data-name="mobile-portrait">
-                    <span class="size mobile-portrait">Mobile</span>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </section>
-          <section class="downloads">
-            <h2>Downloads</h2>
-            <p class="message">
-              <a href="/signup">Sign up</a> for unlimited access to our entire
-              collection of <strong>91</strong> templates (including this one).
-            </p>
-            <ul class="versions">
-              <li data-name="html">
-                <div class="details">
-                  <h3>HTML Template</h3>
-                  <ul>
-                    <li>5.86MB</li>
-                    <li data-action="toggle-description" class="active">
-                      Details
+      <article id="details" class="scrollbarify scrollbarify-none">
+        <div class="actions">
+          <div class="toggle" title="Toggle sidebar"></div>
+          <div class="popout" title="Open in new tab"></div>
+          <div class="reload" title="Reload demo"></div>
+        </div>
+        <div
+          class="scrollbarify-content"
+          style="
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            overflow: hidden;
+          "
+        >
+          <div class="inner">
+            <header>
+              <a href="/" class="back">Back</a>
+              <h1>Hyperbolic</h1>
+              <p>
+                Demo images via
+                <a href="http://unsplash.com" class="offsite" target="_blank"
+                  >Unsplash</a
+                >.
+              </p>
+            </header>
+            <section class="properties">
+              <dl>
+                <dt data-row="category">Category</dt>
+                <dd data-row="category">Anything</dd>
+                <dt data-row="schemes">Color Schemes</dt>
+                <dd data-row="schemes">
+                  <ul class="schemes">
+                    <li data-name="blue" class="active">
+                      <ul class="scheme">
+                        <li style="background-color: #4797ec">#4797ec</li>
+                        <li style="background-color: #884beb">#884beb</li>
+                        <li style="background-color: #ffffff">#ffffff</li>
+                      </ul>
+                    </li>
+                    <li data-name="green">
+                      <ul class="scheme">
+                        <li style="background-color: #31d79b">#31d79b</li>
+                        <li style="background-color: #4b76eb">#4b76eb</li>
+                        <li style="background-color: #ffffff">#ffffff</li>
+                      </ul>
+                    </li>
+                    <li data-name="orange">
+                      <ul class="scheme">
+                        <li style="background-color: #f54a6f">#f54a6f</li>
+                        <li style="background-color: #debf55">#debf55</li>
+                        <li style="background-color: #ffffff">#ffffff</li>
+                      </ul>
                     </li>
                   </ul>
-                </div>
-                <a href="/signup" class="button small">Sign Up + Download</a>
-                <p class="description active">
-                  A responsive website template built with standards-compliant
-                  HTML and CSS. Includes HTML files, stylesheets, all supporting
-                  image and JS assets, and optional
-                  <a href="http://www.sass-lang.com/" target="_blank">Sass</a>
-                  sources.
-                </p>
-              </li>
-              <li data-name="psd">
-                <div class="details">
-                  <h3>PSD Files</h3>
-                  <ul>
-                    <li>45.63MB</li>
-                    <li data-action="toggle-description" class="active">
-                      Details
+                </dd>
+                <dt data-row="layouts">Page Layouts</dt>
+                <dd data-row="layouts">
+                  <ul class="layouts">
+                    <li data-name="index" class="active">
+                      <span class="layout">Homepage</span>
+                    </li>
+                    <li data-name="generic" class="">
+                      <span class="layout">Generic</span>
                     </li>
                   </ul>
-                </div>
-                <a href="/signup" class="button small">Sign Up + Download</a>
-                <p class="description active">
-                  Mockup and asset PSDs for this design. Requires Adobe
-                  Photoshop CS6 or later.
-                </p>
-              </li>
-            </ul>
-          </section>
+                </dd>
+                <dt data-row="sizes">Device Sizes</dt>
+                <dd data-row="sizes">
+                  <ul class="sizes">
+                    <li data-name="desktop" class="active">
+                      <span class="size desktop">Desktop</span>
+                    </li>
+                    <li data-name="tablet-landscape">
+                      <span class="size tablet-landscape">Tablet</span>
+                    </li>
+                    <li data-name="tablet-portrait">
+                      <span class="size tablet-portrait"
+                        >Tablet (Portrait)</span
+                      >
+                    </li>
+                    <li data-name="mobile-portrait">
+                      <span class="size mobile-portrait">Mobile</span>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </section>
+            <section class="downloads">
+              <h2>Downloads</h2>
+              <p class="message">
+                <a href="/signup">Sign up</a> for unlimited access to our entire
+                collection of <strong>91</strong> templates (including this
+                one).
+              </p>
+              <ul class="versions">
+                <li data-name="html">
+                  <div class="details">
+                    <h3>HTML Template</h3>
+                    <ul>
+                      <li>5.86MB</li>
+                      <li data-action="toggle-description" class="active">
+                        Details
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="/signup" class="button small">Sign Up + Download</a>
+                  <p class="description active">
+                    A responsive website template built with standards-compliant
+                    HTML and CSS. Includes HTML files, stylesheets, all
+                    supporting image and JS assets, and optional
+                    <a href="http://www.sass-lang.com/" target="_blank">Sass</a>
+                    sources.
+                  </p>
+                </li>
+                <li data-name="psd">
+                  <div class="details">
+                    <h3>PSD Files</h3>
+                    <ul>
+                      <li>45.63MB</li>
+                      <li data-action="toggle-description" class="active">
+                        Details
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="/signup" class="button small">Sign Up + Download</a>
+                  <p class="description active">
+                    Mockup and asset PSDs for this design. Requires Adobe
+                    Photoshop CS6 or later.
+                  </p>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div
+          class="scrollbarify-track"
+          style="position: absolute; top: 0px; right: 0px; height: 977px"
+        >
+          <div
+            class="scrollbarify-cursor"
+            style="position: absolute; top: 0px; right: 0px; height: 822.87px"
+          ></div>
         </div>
       </article>
-      <div id="viewer">
-        <div class="frame"></div>
+      <div id="viewer" class="desktop">
+        <div class="frame"><iframe></iframe></div>
         <div class="alt-frame">
           <div
             class="bg"
@@ -206,5 +237,6 @@
       ga("create", "UA-50755016-3", "auto");
       ga("send", "pageview");
     </script>
+    <div id="menu"></div>
   </body>
 </html>
