@@ -16,26 +16,30 @@
     <header class="py-6">
         <div class="container flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
             <div class="text-lg font-bold">jua.eth</div>
+
             <div class="hidden md:flex space-x-12 items-center">
                 <a href="#" class="text-selected-text">Home</a>
                 <a href="#work">Work</a>
                 <a href="#clients">Clients</a>
-                <a href="#hire"><button class="px-6 py-2 bg-theme font-bold">Hire me</button></a>
+                <a href="#hire"><button class="px-6 py-2 bg-theme font-bold rounded-lg">Hire me</button></a>
             </div>
             <div class="md:hidden">
                 <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 17.5H0.25V14.6667H13V17.5ZM25.75 10.4167H0.25V7.58333H25.75V10.4167ZM25.75 3.33333H13V0.5H25.75V3.33333Z" fill="white"/></svg>
             </div>
         </div>
+				<div class="container flex justify-between mx-auto px-8 md:px-16 lg:px-32 w-full text-xs leading-3 text-blue-300">(hopefully someone sponsors)</div>
+
     </header>
 
 		<!-- does it pick up this comment -->
-    <div class="container mt-16 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+    <div class="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
         <div class="flex flex-wrap md:flex-nowrap">
 
             <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
                 <div class="
 								absolute 
 								left-50 transform -translate-x-1/2 space-y-6 
+								my-40
 								">
                     <a href="#" class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
                         <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
@@ -54,8 +58,15 @@
 
             <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
                 <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">Building<br> beautiful web experiences.</h1>
-                <div class="w-full flex justify-center md:justify-start">
-                    <button class="px-8 py-4 bg-theme text-white font-bold mt-12 flex items-center space-x-3">
+                <div class="w-full flex lg:justify-end sm:justify-center my-16">
+									<a href="#work">
+                    <button class="px-8 py-4 bg-theme text-white font-bold md:mt-12 flex items-center
+										justify-center
+										h-14
+										space-x-3
+										rounded-lg
+										lg:mr-4
+										">
                         <div>
                             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4375 11C14.4375 11.9117 14.0753 12.786 13.4307 13.4307C12.786 14.0753 11.9117 14.4375 11 14.4375C10.0883 14.4375 9.21398 14.0753 8.56932 13.4307C7.92466 12.786 7.5625 11.9117 7.5625 11C7.5625 10.0883 7.92466 9.21398 8.56932 8.56932C9.21398 7.92466 10.0883 7.5625 11 7.5625C11.9117 7.5625 12.786 7.92466 13.4307 8.56932C14.0753 9.21398 14.4375 10.0883 14.4375 11Z" fill="white"/>
@@ -64,9 +75,30 @@
                         </div>
                         <span>View my work.</span>
                     </button>
+									</a>
                 </div>
             </div>
-            <img src="img/man.png" alt="Man" class="w-3/4 mt-12 md:absolute -mt-6 md:mt-0 right-0 -z-1">
+						<div 
+						class="
+						lg:my-32
+						lg:ml-4
+						rounded-lg
+						bg-center
+						text-center
+						block
+						">
+							<img src="img/mahito.jpg" alt="Man" 
+							class="
+							flex justify-center items-center
+							
+							object-contain
+							md:relative 
+							mt-2 md:mt-0 
+							rounded-lg
+							-z-1
+							">
+							
+						</div>
         </div>
     </div>
 
@@ -94,13 +126,13 @@
 
 
 		<!-- Clients -->
-		<div class="container mt-64 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+		<div class="container mt-48 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
 			<section class="w-full">
 				<h2 id="clients" class="secondary-title">Clients</h2>
 				<p class="section-paragraph">I’ve had the pleasure of working with multiple Fortune 500 companies, designing and implementing both frontend and backend.</p>
 				<!-- Clients -->
 				<div class="space-y-12">
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap rounded-lg">
 						
 						<!-- Client logo -->
 						<div class="mb-6 lg:mb-0">
@@ -120,7 +152,7 @@
 						</div>
 
 					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap rounded-lg">
 						
 						<!-- Client logo -->
 						<div class="mb-6 lg:mb-0">
@@ -140,7 +172,7 @@
 						</div>
 
 					</div>
-					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap">
+					<div class="w-full border border-nav p-16 lg:px-32 lg:py-20 lg:space-x-32 flex justify-center lg:justify-start flex-wrap lg:flex-nowrap rounded-lg">
 						
 						<!-- Client logo -->
 						<div class="mb-6 lg:mb-0">
