@@ -13,3 +13,14 @@ still have to incorporate the idea that I am indeed a jack-of-all-trades master 
 jack of all trades, can be master of any.
 
 love // sosa
+
+- [x] favicon or wtv, title icon
+- [ ] back to top button [link // back to top and progress animation](https://www.freecodecamp.org/news/back-to-top-button-and-page-progressbar-with-html-css-and-js/)
+
+[css only // scroll to top](https://dev.to/jackherizsmith/making-a-back-to-top-button-without-javascript-2ej6)
+
+
+- [ ] card animation css
+- [ ] center the apple logo on the clients cards
+- [ ] make more hover animations just like on `jua.eth`
+
