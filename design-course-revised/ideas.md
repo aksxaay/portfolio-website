@@ -23,4 +23,5 @@ love // sosa
 - [ ] card animation css
 - [ ] center the apple logo on the clients cards
 - [ ] make more hover animations just like on `jua.eth`
-
+- [ ] create obsidian's like documentation place for blog
+- [ ] also .md format compatible
