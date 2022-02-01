@@ -25,3 +25,6 @@ love // sosa
 - [ ] make more hover animations just like on `jua.eth`
 - [ ] create obsidian's like documentation place for blog
 - [ ] also .md format compatible
+  - [ ] found the github [md-page // md html converter](https://github.com/oscarmorrison/md-page)
+
+
