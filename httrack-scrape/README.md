@@ -40,3 +40,6 @@ ripped using httrack (terminal version)
 
 11. [devfolio](https://devfolio.co/home)
     - has really nice smooth looking UI
+
+12. [folio - jack](https://ui8-folio.herokuapp.com/index.html)
+    - suck a pretty website, very smooth animations, perfect for a web designer like myself.
