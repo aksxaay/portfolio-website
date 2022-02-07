@@ -26,5 +26,5 @@ love // sosa
 - [ ] create obsidian's like documentation place for blog
 - [ ] also .md format compatible
   - [ ] found the github [md-page // md html converter](https://github.com/oscarmorrison/md-page)
-
+- [ ] need to port this on react application as a responsible web app.
 
