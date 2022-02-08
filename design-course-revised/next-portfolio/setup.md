@@ -9,3 +9,5 @@ installed
 `npx @eslint/config`
 it is to enforce code style..
 the most popular one being air-bnb
+
+setting up auto-format with prettier
