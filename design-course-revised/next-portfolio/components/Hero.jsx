@@ -1,10 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 import juapfp from '../public/mahito.jpg';
 
 const Hero = () => {
   return (
     
     <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        
         <div className="flex flex-wrap md:flex-nowrap">
 
             <nav className="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
@@ -57,6 +59,7 @@ const Hero = () => {
 									</a>
                 </div>
             </div>
+            
 						<div 
 						className="
 						lg:my-32
@@ -66,7 +69,7 @@ const Hero = () => {
 						text-center
 						block
 						">
-							<img src={juapfp} alt="Jua Profile Picture" 
+                            <Image src={juapfp} alt="Jua Profile Picture" 
 							className="
 							flex justify-center items-center
 							
@@ -74,8 +77,10 @@ const Hero = () => {
 							md:relative 
 							mt-2 md:mt-0 
 							rounded-lg
-							-z-1
+							-z-0
 							"/>
+
+                            
 							
 						</div>
         </div>

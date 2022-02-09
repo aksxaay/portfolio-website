@@ -33,7 +33,7 @@ function Contact() {
 						<div className="flex mt-20 space-x-6">
 							{/* <!-- Youtube --> */}
 							<a href="https://www.youtube.com/channel/UCCD-9JkB4yxgsl_SUwX4OXQ/" target="_blank">
-								<img className="invert w-10 h-10 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" src="img/youtube-logo.png" alt="jua youtube link"/>
+								<img className="invert w-10 h-10 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" src="/youtube-logo.png" alt="jua youtube link"/>
 							</a>
 							{/* <!-- Twitter --> */}
 							<a href="https://twitter.com/juanweeb" target="_blank">
@@ -42,22 +42,22 @@ function Contact() {
 
 							{/* <!-- Discord // Dissonance--> */}
 							<a href="https://discord.gg/b7d92v8">
-								<img className="w-8 h-8 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" src="img/discord-logo.png" alt="dissonance discord link"/>
+								<img className="w-8 h-8 lg:w-12 lg:h-12" width="50" height="50" viewBox="0 0 50 50" fill="none" src="/discord-logo.png" alt="dissonance discord link"/>
 							</a>
 
 							{/* <!-- Instagram --> */}
 							<a href="https://www.instagram.com/juanweeb/">
-								<img className="pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain" width="50" height="50" viewBox="0 0 50 50" fill="none" src="img/instagram-logo.png" alt="juanweeb instagram link"/>
+								<img className="pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain" width="50" height="50" viewBox="0 0 50 50" fill="none" src="/instagram-logo.png" alt="juanweeb instagram link"/>
 							</a>
 
 							{/* <!-- Behance --> */}
 							<a href="https://www.behance.net/">
-								<img className="pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain invert" width="60" height="60" viewBox="0 0 60 60" src="img/behance.png" alt="behance link"/>
+								<img className="pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain invert" width="60" height="60" viewBox="0 0 60 60" src="/behance.png" alt="behance link"/>
 							</a>
 
 							{/* <!-- Dribble --> */}
 							<a href="https://www.behance.net/">
-								<img className="invert pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain" width="45" height="45" viewBox="0 0 45 45" src="img/dribbble.png" alt="dribble link"/>
+								<img className="invert pr-1 w-8 h-8 lg:w-12 lg:h-12 object-contain" width="45" height="45" viewBox="0 0 45 45" src="/dribbble.png" alt="dribble link"/>
 							</a>
 
 						</div>
