@@ -12,8 +12,8 @@ function HomePage() {
       <All.Banner/>
       <All.Navbar/>
       <All.Hero/>
-      {/* <All.StatCards/> */}
-      {/* <All.Work/> */}
+      <All.StatCards/>
+      <All.Work/>
       {/* <All.Contact/> */}
 
     </body>

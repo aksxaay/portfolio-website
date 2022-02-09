@@ -17,3 +17,7 @@ this is a decent project setup.
 I also forked a couple boilerplate code on github, that hopefully has all the solutions to my problems.
 
 ESLint + Airbnb Styleguide.
+
+
+well you have to mention the allowed domains it can go out of..
+so I have to add unsplash to the list of allowed domains.
