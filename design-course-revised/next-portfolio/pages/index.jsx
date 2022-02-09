@@ -1,11 +1,22 @@
 
-import {Banner} from '../components/export'
+import * as All from '../components/export'
 
 function HomePage() {
   return (
     <>
+    <div>
+
+      
+    </div>
     {/* let's try code splitting */}
-      <Banner/>
+      <All.IndexPage/>
+      <All.Banner/>
+      <All.Navbar/>
+      {/* <All.Hero/> */}
+      {/* <All.StatCards/> */}
+      {/* <All.Work/> */}
+      {/* <All.Contact/> */}
+
     </>
   )
 }
