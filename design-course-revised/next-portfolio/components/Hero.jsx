@@ -1,46 +1,45 @@
 import React from 'react';
-import Image from 'next/image';
-import juapfp from '../public/mahito.jpg'
+import juapfp from '../public/mahito.jpg';
 
 const Hero = () => {
   return (
     
-    <div class="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
-        <div class="flex flex-wrap md:flex-nowrap">
+    <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full">
+        <div className="flex flex-wrap md:flex-nowrap">
 
-            <nav class="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
-                <div class="
+            <nav className="inline-block lg:mr-24 lg:w-4 fixed left-percentage hidden xl:block">
+                <div className="
                     absolute 
                     transform -translate-x-1/2 space-y-6 
                     my-40
                     ">
-                    <a href="#" class="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
+                    <a href="#" className="nav-dot selected-circle block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Home</span>
                     </a>
-                    <a href="#work" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Work</span>
+                    <a href="#work" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Work</span>
                     </a>
-                    <a href="#clients" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Clients</span>
+                    <a href="#clients" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Clients</span>
                     </a>
-                    <a href="#hire" class="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
-                        <span class="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
+                    <a href="#hire" className="nav-dot block w-7 h-7 rounded-full border-4 border-nav bg-body">
+                        <span className="bg-black px-2 py-1 rounded-md ml-10 opacity-0">Hire</span>
                     </a>
                 </div>
             </nav>
 
-            <div class="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
-                <h1 class="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">Building<br/> beautiful web experiences.</h1>
+            <div className="flex flex-wrap lg:ml-20 justify-center md:justify-start max-w-xl mt-0 md:my-36">
+                <h1 className="font-bold text-5xl md:text-6xl lg:text-7xl text-center md:text-left">Building<br/> beautiful web experiences.</h1>
 
 								<br/>
 
-                <h3 class="font-bold sm:text-sm md:text-xl lg:text-3xl text-center md:text-left lg:ml-64 sm:ml-0 sm:mt-0">Wreak<br/>Havok.</h3>
+                <h3 className="font-bold sm:text-sm md:text-xl lg:text-3xl text-center md:text-left lg:ml-64 sm:ml-0 sm:mt-0">Wreak<br/>Havok.</h3>
 
 
 
-                <div class="w-full flex lg:justify-start justify-center my-16">
+                <div className="w-full flex lg:justify-start justify-center my-16">
 									<a href="#work">
-                    <button class="px-8 py-4 bg-theme text-white font-bold md:mt-12 flex items-center
+                    <button className="px-8 py-4 bg-theme text-white font-bold md:mt-12 flex items-center
 										justify-center
 										h-14
 										space-x-3
@@ -59,7 +58,7 @@ const Hero = () => {
                 </div>
             </div>
 						<div 
-						class="
+						className="
 						lg:my-32
 						lg:ml-4
 						rounded-lg
@@ -67,8 +66,8 @@ const Hero = () => {
 						text-center
 						block
 						">
-							<Image src={juapfp} alt="Jua Profile Picture" 
-							class="
+							<img src={juapfp} alt="Jua Profile Picture" 
+							className="
 							flex justify-center items-center
 							
 							object-contain

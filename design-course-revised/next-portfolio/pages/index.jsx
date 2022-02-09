@@ -7,14 +7,14 @@ function HomePage() {
     <body className="bg-body text-white font-poppins pb-6">
 
       
-      {/* let's try code splitting */}
       <All.IndexPage/>
       <All.Banner/>
       <All.Navbar/>
       <All.Hero/>
       <All.StatCards/>
       <All.Work/>
-      {/* <All.Contact/> */}
+      <All.Clients/>
+      <All.Contact/>
 
     </body>
     </>

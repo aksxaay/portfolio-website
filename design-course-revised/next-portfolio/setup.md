@@ -21,3 +21,6 @@ ESLint + Airbnb Styleguide.
 
 well you have to mention the allowed domains it can go out of..
 so I have to add unsplash to the list of allowed domains.
+Only kept three cards since I have to dynamically configure them later on.
+
+So the only issue is having to manually fix every class name on everry goddamn paste.
