@@ -12,7 +12,7 @@ function HomePage() {
       <All.IndexPage/>
       <All.Banner/>
       <All.Navbar/>
-      {/* <All.Hero/> */}
+      <All.Hero/>
       {/* <All.StatCards/> */}
       {/* <All.Work/> */}
       {/* <All.Contact/> */}
