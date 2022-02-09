@@ -4,11 +4,10 @@ import * as All from '../components/export'
 function HomePage() {
   return (
     <>
-    <div>
+    <body className="bg-body text-white font-poppins pb-6">
 
       
-    </div>
-    {/* let's try code splitting */}
+      {/* let's try code splitting */}
       <All.IndexPage/>
       <All.Banner/>
       <All.Navbar/>
@@ -17,6 +16,7 @@ function HomePage() {
       {/* <All.Work/> */}
       {/* <All.Contact/> */}
 
+    </body>
     </>
   )
 }
