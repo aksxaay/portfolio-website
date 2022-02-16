@@ -62,3 +62,7 @@ chart is more friendly.
 they have the zoomable sunburst just like the this website that i can recall.
 
 I tried to data visualize myself, tried to visualize jua.
+
+
+so we're gonna use a react concept called refs
+- this is what we use for third-party DOM libraries (d3)
