@@ -26,15 +26,33 @@ class StackSunburst extends React.Component {
   }
 
   componentDidMount(){
-    let accessToRef = d3.select(this.myRef.current);
-    accessToRef.style("background-color", "green")
+    const temperatureData = [ 8, 5, 13, 9, 12 ]
+    let accessToRef = 
+    d3.select(this.myRef.current)
+      .selectAll("h2")
+      .data(temperatureData)
+      .enter()
+        .append("h2")
+        .text((datapoint) => `${datapoint} degrees`)
+        .style((datapoint) => {
+            if (datapoint > 10) {
+                return "red"
+            } else { return "blue" }     
+        }) 
+
+    d3.select(this.myRef.current)
+        .selectAll("h2")
+        .style("color", function() {
+            return "hsl(" + Math.random() * 360 + ",100%,50%)";
+        }
+    );
   }
     
   render() {
     return (
         <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
             ref={this.myRef}>
-          <h1>Testing refs</h1>
+              <div ref="temperatures"></div>
             
         </div>
     )
