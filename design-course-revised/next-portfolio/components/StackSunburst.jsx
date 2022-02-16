@@ -25,34 +25,44 @@ class StackSunburst extends React.Component {
     this.myRef = React.createRef();
   }
 
-  componentDidMount(){
-    const temperatureData = [ 8, 5, 13, 9, 12 ]
-    let accessToRef = 
-    d3.select(this.myRef.current)
-      .selectAll("h2")
-      .data(temperatureData)
-      .enter()
-        .append("h2")
-        .text((datapoint) => `${datapoint} degrees`)
-        .style((datapoint) => {
-            if (datapoint > 10) {
-                return "red"
-            } else { return "blue" }     
-        }) 
+  componentDidMount() {
+    this.drawChart();
+    let accessToRef = d3.select(this.myRef.current)
+  }
 
-    d3.select(this.myRef.current)
-        .selectAll("h2")
-        .style("color", function() {
-            return "hsl(" + Math.random() * 360 + ",100%,50%)";
-        }
-    );
+  drawChart(){
+    const data = [ 8, 5, 13, 9, 12 ]
+
+    const w = 500;
+    const h = 400;
+
+    const accessToRef = d3.select(this.myRef.current)
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .style("background-color", "#cccccc")
+      .style("padding", 10)
+      .style("margin-left", 10)
+
+
+
+      accessToRef.selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i*70)
+        .attr("y", (d, i) => h - 10 * d)
+        .attr("width", 65)
+        .attr("height", (d, i) => d*10)
+        .attr("fill", "tomato");
+
   }
     
   render() {
     return (
         <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
             ref={this.myRef}>
-              <div ref="temperatures"></div>
+              <div ref="rect">HEYA</div>
             
         </div>
     )

@@ -19,6 +19,7 @@ function HomePage() {
       <All.Hero/>
       <All.StatCards/>
       
+      <All.StackSunburst/>
       
       <DynamicComponentWithNoSSR/>
       <style jsx global>{`

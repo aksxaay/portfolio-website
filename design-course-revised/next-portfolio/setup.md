@@ -66,3 +66,6 @@ I tried to data visualize myself, tried to visualize jua.
 
 so we're gonna use a react concept called refs
 - this is what we use for third-party DOM libraries (d3)
+
+finally managed to get some working output, both SSR and Dynamic Rendering.
+[data vis in react using d3](https://www.youtube.com/watch?v=YKDIsXA4OAc)
