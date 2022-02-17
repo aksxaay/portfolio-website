@@ -1,8 +1,12 @@
 
 import * as All from '../components/export'
+import {data} from '../services/sunburst'
+
 
 // ssr disabled for nivo charting
 import dynamic from 'next/dynamic'
+
+
 
 const DynamicComponentWithNoSSR = dynamic(
     () => import('../components/StackSunburst'),
@@ -18,10 +22,9 @@ function HomePage() {
       <All.Navbar/>
       <All.Hero/>
       <All.StatCards/>
+      <All.StackSunburst data={data}/>
       
-      <All.StackSunburst/>
-      
-      <DynamicComponentWithNoSSR/>
+      <DynamicComponentWithNoSSR data={data}/>
       <style jsx global>{`
             // body {
             //     height: 100vh;

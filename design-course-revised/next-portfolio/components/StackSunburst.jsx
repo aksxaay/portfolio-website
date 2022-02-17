@@ -1,81 +1,110 @@
 import React from 'react'
 import { ResponsiveSunburst } from '@nivo/sunburst'
-import {data} from '../services/sunburst'
 
 import * as d3 from 'd3'
-// to use for tweakable values
-// import config from './chart.config'
+import { useD3 } from '../hooks/useD3';
 
-
-// install (please make sure versions match peerDependencies)
-// yarn add @nivo/core @nivo/sunburst
-
-// make sure parent container have a defined height when using
-// responsive component, otherwise height will be 0 and
-// no chart will be rendered.
-// website examples showcase many properties,
-// you'll often use just a few of them.
+// import {data} from '../services/sunburst'
 
 
 
-class StackSunburst extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
-  }
-
-  componentDidMount() {
-    this.drawChart();
-    let accessToRef = d3.select(this.myRef.current)
-  }
-
-  drawChart(){
-    const data = [ 8, 5, 13, 9, 12 ]
-
-    const w = 500;
-    const h = 400;
-
-    const accessToRef = d3.select(this.myRef.current)
-      .append("svg")
-      .attr("width", w)
-      .attr("height", h)
-      .style("background-color", "#cccccc")
-      .style("padding", 10)
-      .style("margin-left", 10)
-
-
-
-      accessToRef.selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("x", (d, i) => i*70)
-        .attr("y", (d, i) => h - 10 * d)
-        .attr("width", 65)
-        .attr("height", (d, i) => d*10)
-        .attr("fill", "tomato");
-
-  }
-    
-  render() {
+function StackSunburst({data}) {
+      const ref = useD3(
+      (svg) => {
+        const height = 500;
+        const width = 500;
+        const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+  
+        const x = d3
+          .scaleBand()
+          .domain(data.map((d) => d.year))
+          .rangeRound([margin.left, width - margin.right])
+          .padding(0.1);
+  
+        const y1 = d3
+          .scaleLinear()
+          .domain([0, d3.max(data, (d) => d.sales)])
+          .rangeRound([height - margin.bottom, margin.top]);
+  
+        const xAxis = (g) =>
+          g.attr("transform", `translate(0,${height - margin.bottom})`).call(
+            d3
+              .axisBottom(x)
+              .tickValues(
+                d3
+                  .ticks(...d3.extent(x.domain()), width / 40)
+                  .filter((v) => x(v) !== undefined)
+              )
+              .tickSizeOuter(0)
+          );
+  
+        const y1Axis = (g) =>
+          g
+            .attr("transform", `translate(${margin.left},0)`)
+            .style("color", "steelblue")
+            .call(d3.axisLeft(y1).ticks(null, "s"))
+            .call((g) => g.select(".domain").remove())
+            .call((g) =>
+              g
+                .append("text")
+                .attr("x", -margin.left)
+                .attr("y", 10)
+                .attr("fill", "currentColor")
+                .attr("text-anchor", "start")
+                .text(data.y1)
+            );
+  
+        svg.select(".x-axis").call(xAxis);
+        svg.select(".y-axis").call(y1Axis);
+  
+        svg
+          .select(".plot-area")
+          .attr("fill", "steelblue")
+          .selectAll(".bar")
+          .data(data)
+          .join("rect")
+          .attr("class", "bar")
+          .attr("x", (d) => x(d.year))
+          .attr("width", x.bandwidth())
+          .attr("y", (d) => y1(d.sales))
+          .attr("height", (d) => y1(0) - y1(d.sales));
+      },
+      [data.length]
+    );
+  
     return (
-        <div className="container mt-8 flex justify-between items-center mx-auto px-8 md:px-14 lg:px-24 w-full"
-            ref={this.myRef}>
-              <div ref="rect">HEYA</div>
-            
-        </div>
-    )
-  }
-    
+      <>
+      <svg
+        ref={ref}
+        style={{
+          height: 500,
+          width: "100%",
+          marginRight: "0px",
+          marginLeft: "0px",
+        }}
+      >
+        <g className="plot-area" />
+        <g className="x-axis" />
+        <g className="y-axis" />
+      </svg>
+
+      <ul>
+        {data.year}
+      </ul>
+      </>
+    );
+}
+
+
+export async function getStaticProps() {
+    console.log("inside getStaticProps()");
+    return {
+          props: {
+              data: data,
+          },
+    }
 }
 
 export default StackSunburst
-// export async function getStaticProps() {
-//     console.log("inside getStaticProps()");
-//     return {
-//           props: {
-//               data: data,
-//           },
-//     }
-// }
+

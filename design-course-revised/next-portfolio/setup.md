@@ -54,7 +54,7 @@ so there's 3 so far.
 - nivo
 
 have my eyes on this particular type of chart
-- [zoomable sunburst](https://observablehq.com/@d3/zoomable-sunburst) - d3
+- [zoomable sunburst // observable](https://observablehq.com/@d3/zoomable-sunburst) - d3
 - radar chart - chart.js
 d3 is more advanced and robust
 chart is more friendly.
@@ -69,3 +69,22 @@ so we're gonna use a react concept called refs
 
 finally managed to get some working output, both SSR and Dynamic Rendering.
 [data vis in react using d3](https://www.youtube.com/watch?v=YKDIsXA4OAc)
+
+also need to refer to this
+[sunburst implementation // observable](https://observablehq.com/@d3/sunburst)
+
+
+okay all my efforts to use the data straight from the observable are in vain
+
+[d3 in react](https://www.pluralsight.com/guides/using-d3.js-inside-a-react-app)
+this article gives insight on how to use them despite both of them wanting direct access to the DOM model.
+
+- create basic scaffolding
+- create custom hook to use d3 using `useRef` `useEffect`
+> take advantage of the useRef and useEffect hook to link D3.js with the svg element that has been created, and specify when your D3.js function should be executed.
+
+
+asks me to create a new hook
+
+I forgot to export the data variable from `services/sunburst`
+there's 2 listings one dynamically rendered too
