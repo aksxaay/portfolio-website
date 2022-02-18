@@ -2,6 +2,8 @@
 import * as All from '../components/export'
 import {data} from '../services/sunburst'
 
+import SunWrapper from "../components/sunburst/SunWrapper";
+
 
 // ssr disabled for nivo charting
 import dynamic from 'next/dynamic'
@@ -22,7 +24,7 @@ function HomePage() {
       <All.Navbar/>
       <All.Hero/>
       <All.StatCards/>
-      <All.StackSunburst data={data}/>
+      <SunWrapper/>
       
       <DynamicComponentWithNoSSR data={data}/>
       <style jsx global>{`

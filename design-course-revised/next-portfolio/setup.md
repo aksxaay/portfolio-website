@@ -88,3 +88,48 @@ asks me to create a new hook
 
 I forgot to export the data variable from `services/sunburst`
 there's 2 listings one dynamically rendered too
+
+
+someone on stack overflow addresses these issues
+[observable to react conversion](https://stackoverflow.com/questions/63292255/zoomable-sunburst-chart-shows-only-two-layers-of-the-hierarchy-at-a-time-in-reac)
+
+[how i created sunburst chart](https://towardsdatascience.com/how-i-created-a-sunburst-chart-using-javascript-to-visualize-covid-19-data-4ef27b45af8a) - however this one comes WITHOUT animation
+
+- sunburst
+- ring charts
+- multilayer pie charts
+- treepies
+
+
+[anychart](https://www.anychart.com/products/anychart/gallery/Sunburst_Charts/)
+- new charting technology with a couple sunburst chart demos
+
+
+I also forgot checking code samples on codesandbox.io / codepen
+
+[react-zoomable-sunburst-d3-v4](https://www.npmjs.com/package/react-zoomable-sunburst-d3-v4)
+
+
+
+
+WHAT THE ACTUAL FUCK -
+the best sunburst chart I've seen so far w the most fluid animation holy shite
+[smoothest-sunburst](https://codesandbox.io/s/blissful-resonance-wwl4q)
+
+also had to install this obscure package
+[sunburst-chart](https://www.npmjs.com/package/sunburst-chart)
+
+
+
+well I wasn't able to integrate this code, still have to figure out that error.. BUT. 
+uber has a vis, let's see what that's about.
+
+
+```
+Error [ERR_REQUIRE_ESM]: require() of ES Module /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/d3-selection/src/index.js from /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js not supported.
+Instead change the require of index.js in /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js to a dynamic import() which is available in all CommonJS modules.
+```
+
+
+`/home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js`
+they want this to have import() and not require()
