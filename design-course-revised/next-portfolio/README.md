@@ -25,3 +25,7 @@ yarn create next-app --example with-tailwindcss with-tailwindcss-app
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+
+
+Choosing between Gatsby, React and Next.js
+![gatsby-vs-react-next](2022-03-17-11-39-35.png)

@@ -133,3 +133,63 @@ Instead change the require of index.js in /home/axsae/Documents/coding_projects/
 
 `/home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js`
 they want this to have import() and not require()
+
+-----
+lemme try and add nivo one last time.
+- nope
+
+
+Also trying out react-sunburst-d3-v4
+
+
+apparently nivo has some issue with their polyfill as mentioned here
+[ref error: ResizeObserver is not defined // github issues](https://github.com/plouc/nivo/issues/1889)
+
+
+
+
+`/home/axsae/Desktop/to-self-with-love/talents` this has all the things I kinda know about lol.
+
+
+I also have GraphCMS setup with the github, which is on my personal e-mail.
+
+
+**23rd Feb 2021**
+putting sunburst on hold.
+
+Finally getting around to graph CMS - 
+
+> require() of ES Module in d3-selection/src/index.js
+> please use dynamic import()
+
+
+"private": true, in the `package.json` prevents it from being published online on npm
+
+[commonJs vs es6 dynamic imports](https://techsparx.com/nodejs/esnext/dynamic-import-2.html)
+es6 - `.mjs` file format
+
+
+after reading that article, it FUCKING MAKES SENSE>
+
+Just use the dynamic import()
+promise based? - possible to use async/await callback style.
+
+### Changes
+1. changed `require` to `await import` in `/home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js`
+
+await is only valid in async functions and top level bodies of mmodules.
+
+in next.js you are always doing server side rendering.
+
+> Next.js is universal, which means it executes code first server-side, then client-side. The window object is only present client-side, so if you absolutely need to have access to it in some React component, you should put that code in componentDidMount. This lifecycle method will only be executed on the client. You may also want to check if there isn't some alternative universal library which may suit your needs.
+[Next.js can't access window object](https://stackoverflow.com/questions/55151041/window-is-not-defined-in-next-js-react-app)
+You can also use React Hooks and effectively move the code in there.
+
+oh no, commonJS is a thing? - module formatting system
+
+`'use strict';` - is this thing on top of `sunburst-chart.common.js`
+
+
+updated `data-color.js` to the required values
+
+setting up proper dynamic shii didn't work

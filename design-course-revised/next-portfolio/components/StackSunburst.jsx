@@ -1,5 +1,4 @@
 import React from 'react'
-import { ResponsiveSunburst } from '@nivo/sunburst'
 
 import * as d3 from 'd3'
 import { useD3 } from '../hooks/useD3';

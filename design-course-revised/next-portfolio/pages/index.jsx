@@ -1,16 +1,20 @@
 
 import * as All from '../components/export'
-import {data} from '../services/sunburst'
+// import {data} from '../services/sunburst'
 
-import SunWrapper from "../components/sunburst/SunWrapper";
+
+// import SunWrapper from "../components/sunburst/SunWrapper";
 
 
 // ssr disabled for nivo charting
 import dynamic from 'next/dynamic'
 
+const DynamicStackSunWrapper = dynamic(
+  () => import('../components/sunburst/SunWrapper'),
+  { ssr: false }
+)
 
-
-const DynamicComponentWithNoSSR = dynamic(
+const DynamicStackSunburst = dynamic(
     () => import('../components/StackSunburst'),
     { ssr: false }
   )
@@ -24,34 +28,8 @@ function HomePage() {
       <All.Navbar/>
       <All.Hero/>
       <All.StatCards/>
-      <SunWrapper/>
-      
-      <DynamicComponentWithNoSSR data={data}/>
-      <style jsx global>{`
-            // body {
-            //     height: 100vh;
-            //     width: 100vw;
-            //     display: grid;
-            //     text-align: center;
-            //     justify-content: center;
-            //     align-items: center;
-            // }
-
-            .chart {
-              height:50vh;
-              width:60vw;
-              background: white;
-              box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-              transition: 0.3s;
-              }
-
-            .chart:hover {
-              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-            }
-              
-              
-        `}</style>
-        
+      {/* <DynamicStackSunburst data={data}/> */}
+      <DynamicStackSunWrapper/>
       <All.Work/>
       <All.Clients/>
       <All.Contact/>

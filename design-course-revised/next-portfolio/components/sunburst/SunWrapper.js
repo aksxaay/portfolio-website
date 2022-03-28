@@ -1,4 +1,4 @@
-import React from "react";
+import {React} from "react";
 // import ReactDOM from "react-dom";
 import SunburstChart from "./SunburstChart.js";
 import Sunburst from "sunburst-chart";
