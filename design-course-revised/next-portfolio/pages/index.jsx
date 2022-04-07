@@ -1,6 +1,6 @@
 
 import * as All from '../components/export'
-// import {data} from '../services/sunburst'
+import {data} from '../services/sunburst'
 
 
 // import SunWrapper from "../components/sunburst/SunWrapper";

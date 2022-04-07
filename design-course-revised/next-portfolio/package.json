@@ -4,7 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:css": "npx tailwindcss -i styles/globals.css -o styles/output.css --watch"
+    "start:css": "npx tailwindcss -i styles/globals.css -o styles/output.css --watch",
+    "lint": "next lint"
   },
   "dependencies": {
     "@nivo/core": "^0.79.0",
@@ -20,6 +21,7 @@
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "autoprefixer": "^10.4.0",
+    "eslint-config-next": "12.1.2",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
     "prettier-plugin-tailwindcss": "^0.1.1",

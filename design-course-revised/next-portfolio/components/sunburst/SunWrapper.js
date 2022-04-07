@@ -1,21 +1,35 @@
 import {React} from "react";
 // import ReactDOM from "react-dom";
-import SunburstChart from "./SunburstChart.js";
-import Sunburst from "sunburst-chart";
+// import SunburstChart from "./SunburstChart.js";
+// import Sunburst from "sunburst-chart";
 import data from "./data-color";
+
+import dynamic from 'next/dynamic'
+
+
+// SunburstChart
+const DSunburstChart = dynamic(
+  () => import('./SunburstChart'),
+  { ssr: false }
+)
+
+const DSunburst = dynamic(
+  () => import('sunburst-chart'),
+  { ssr: false }
+)
 
 class SunWrapper extends React.Component {
   constructor() {
     super();
     this.myRef = React.createRef();
     this.state = {
-      myChart: Sunburst().data(data)
+      myChart: DSunburst().data(data)
     };
   }
 
   componentDidMount() {
     // set el height and width etc.
-    Sunburst()
+    DSunburst()
       .data(data)
       .label("name")
       .size("size")
@@ -27,8 +41,8 @@ class SunWrapper extends React.Component {
   render() {
     console.log("node", this.myRef);
     return (
-      <div>
-        <SunburstChart ref={this.myRef} />
+      <div className="sample">
+        <DSunburstChart ref={this.myRef} />
       </div>
     );
   }

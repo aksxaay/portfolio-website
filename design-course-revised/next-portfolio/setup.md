@@ -193,3 +193,20 @@ oh no, commonJS is a thing? - module formatting system
 updated `data-color.js` to the required values
 
 setting up proper dynamic shii didn't work
+
+going to try and fix everything into dynamic link on `SunWrapper.js`
+
+
+nope no luck ripp
+
+only one of the graphs work here
+
+![](only-graph.png)
+
+![](graph-smh.png)
+
+[react libraries in next.js](https://www.youtube.com/watch?v=DA0ie1RPP6g)
+
+[ESLint in Next.js](https://nextjs.org/docs/basic-features/eslint) is now easier than ever
+`npm run lint`
+Strict Rule set
