@@ -1,13 +1,12 @@
 import React from 'react'
-import Sunburst from 'react-sunburst-d3-v4';
+import Sunburst from 'react-sunburst-d3-v4'
 import data from './sunburst/datav4'
 
-
-console.log('data:', data);
+console.log('data:', data)
 
 class Sunburstv4 extends React.Component {
-  onSelect(event){
-    console.log(event);
+  onSelect(event) {
+    console.log(event)
   }
   render() {
     return (
@@ -16,7 +15,12 @@ class Sunburstv4 extends React.Component {
           data={data}
           onSelect={this.onSelect}
           scale="linear"
-          tooltipContent={ <div class="sunburstTooltip" style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;" /> }
+          tooltipContent={
+            <div
+              class="sunburstTooltip"
+              style="position:absolute; color:'black'; z-index:10; background: #e2e2e2; padding: 5px; text-align: center;"
+            />
+          }
           tooltip
           tooltipPosition="right"
           keyId="anagraph"
@@ -24,8 +28,8 @@ class Sunburstv4 extends React.Component {
           height="400"
         />
       </div>
-    );
+    )
   }
-};
+}
 
 export default Sunburstv4

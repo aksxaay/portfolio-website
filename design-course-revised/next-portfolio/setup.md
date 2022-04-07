@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 ### next-portfolio
 
 Setup Explained.
@@ -18,17 +19,15 @@ I also forked a couple boilerplate code on github, that hopefully has all the so
 
 ESLint + Airbnb Styleguide.
 
-
 well you have to mention the allowed domains it can go out of..
 so I have to add unsplash to the list of allowed domains.
 Only kept three cards since I have to dynamically configure them later on.
 
 So the only issue is having to manually fix every class name on everry goddamn paste.
 
-also ran tailwind CLI build process. I guess it isn't done auto, so 
+also ran tailwind CLI build process. I guess it isn't done auto, so
 `npx tailwindcss -i styles/globals.css -o styles/output.css --watch`
 separate terminal process
-
 
 we're gonna use the data library nivo for showing what my software stack really is....
 
@@ -45,26 +44,29 @@ The solution here is to use [next/dynamic](https://nextjs.org/docs/advanced-feat
 
 from what I can understand, the chart code isn't getting injected into the div class.
 
-now we have this new problem, 
+now we have this new problem,
+
 > `TypeError: Cannot read properties of undefined (reading 'value')`
 
 so there's 3 so far.
+
 - d3
 - chart.js
 - nivo
 
 have my eyes on this particular type of chart
+
 - [zoomable sunburst // observable](https://observablehq.com/@d3/zoomable-sunburst) - d3
 - radar chart - chart.js
-d3 is more advanced and robust
-chart is more friendly.
+  d3 is more advanced and robust
+  chart is more friendly.
 
 they have the zoomable sunburst just like the this website that i can recall.
 
 I tried to data visualize myself, tried to visualize jua.
 
-
 so we're gonna use a react concept called refs
+
 - this is what we use for third-party DOM libraries (d3)
 
 finally managed to get some working output, both SSR and Dynamic Rendering.
@@ -73,7 +75,6 @@ finally managed to get some working output, both SSR and Dynamic Rendering.
 also need to refer to this
 [sunburst implementation // observable](https://observablehq.com/@d3/sunburst)
 
-
 okay all my efforts to use the data straight from the observable are in vain
 
 [d3 in react](https://www.pluralsight.com/guides/using-d3.js-inside-a-react-app)
@@ -81,14 +82,12 @@ this article gives insight on how to use them despite both of them wanting direc
 
 - create basic scaffolding
 - create custom hook to use d3 using `useRef` `useEffect`
-> take advantage of the useRef and useEffect hook to link D3.js with the svg element that has been created, and specify when your D3.js function should be executed.
-
+  > take advantage of the useRef and useEffect hook to link D3.js with the svg element that has been created, and specify when your D3.js function should be executed.
 
 asks me to create a new hook
 
 I forgot to export the data variable from `services/sunburst`
 there's 2 listings one dynamically rendered too
-
 
 someone on stack overflow addresses these issues
 [observable to react conversion](https://stackoverflow.com/questions/63292255/zoomable-sunburst-chart-shows-only-two-layers-of-the-hierarchy-at-a-time-in-reac)
@@ -100,17 +99,13 @@ someone on stack overflow addresses these issues
 - multilayer pie charts
 - treepies
 
-
 [anychart](https://www.anychart.com/products/anychart/gallery/Sunburst_Charts/)
-- new charting technology with a couple sunburst chart demos
 
+- new charting technology with a couple sunburst chart demos
 
 I also forgot checking code samples on codesandbox.io / codepen
 
 [react-zoomable-sunburst-d3-v4](https://www.npmjs.com/package/react-zoomable-sunburst-d3-v4)
-
-
-
 
 WHAT THE ACTUAL FUCK -
 the best sunburst chart I've seen so far w the most fluid animation holy shite
@@ -119,55 +114,44 @@ the best sunburst chart I've seen so far w the most fluid animation holy shite
 also had to install this obscure package
 [sunburst-chart](https://www.npmjs.com/package/sunburst-chart)
 
-
-
-well I wasn't able to integrate this code, still have to figure out that error.. BUT. 
+well I wasn't able to integrate this code, still have to figure out that error.. BUT.
 uber has a vis, let's see what that's about.
-
 
 ```
 Error [ERR_REQUIRE_ESM]: require() of ES Module /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/d3-selection/src/index.js from /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js not supported.
 Instead change the require of index.js in /home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js to a dynamic import() which is available in all CommonJS modules.
 ```
 
-
 `/home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js`
 they want this to have import() and not require()
 
------
+---
+
 lemme try and add nivo one last time.
+
 - nope
 
-
 Also trying out react-sunburst-d3-v4
-
 
 apparently nivo has some issue with their polyfill as mentioned here
 [ref error: ResizeObserver is not defined // github issues](https://github.com/plouc/nivo/issues/1889)
 
-
-
-
 `/home/axsae/Desktop/to-self-with-love/talents` this has all the things I kinda know about lol.
 
-
 I also have GraphCMS setup with the github, which is on my personal e-mail.
-
 
 **23rd Feb 2021**
 putting sunburst on hold.
 
-Finally getting around to graph CMS - 
+Finally getting around to graph CMS -
 
 > require() of ES Module in d3-selection/src/index.js
 > please use dynamic import()
-
 
 "private": true, in the `package.json` prevents it from being published online on npm
 
 [commonJs vs es6 dynamic imports](https://techsparx.com/nodejs/esnext/dynamic-import-2.html)
 es6 - `.mjs` file format
-
 
 after reading that article, it FUCKING MAKES SENSE>
 
@@ -175,6 +159,7 @@ Just use the dynamic import()
 promise based? - possible to use async/await callback style.
 
 ### Changes
+
 1. changed `require` to `await import` in `/home/axsae/Documents/coding_projects/git/portfolio-website/design-course-revised/next-portfolio/node_modules/sunburst-chart/dist/sunburst-chart.common.js`
 
 await is only valid in async functions and top level bodies of mmodules.
@@ -182,20 +167,18 @@ await is only valid in async functions and top level bodies of mmodules.
 in next.js you are always doing server side rendering.
 
 > Next.js is universal, which means it executes code first server-side, then client-side. The window object is only present client-side, so if you absolutely need to have access to it in some React component, you should put that code in componentDidMount. This lifecycle method will only be executed on the client. You may also want to check if there isn't some alternative universal library which may suit your needs.
-[Next.js can't access window object](https://stackoverflow.com/questions/55151041/window-is-not-defined-in-next-js-react-app)
-You can also use React Hooks and effectively move the code in there.
+> [Next.js can't access window object](https://stackoverflow.com/questions/55151041/window-is-not-defined-in-next-js-react-app)
+> You can also use React Hooks and effectively move the code in there.
 
 oh no, commonJS is a thing? - module formatting system
 
 `'use strict';` - is this thing on top of `sunburst-chart.common.js`
-
 
 updated `data-color.js` to the required values
 
 setting up proper dynamic shii didn't work
 
 going to try and fix everything into dynamic link on `SunWrapper.js`
-
 
 nope no luck ripp
 
@@ -210,3 +193,20 @@ only one of the graphs work here
 [ESLint in Next.js](https://nextjs.org/docs/basic-features/eslint) is now easier than ever
 `npm run lint`
 Strict Rule set
+
+### sanity / graph cms
+
+we have to work on some backend LOL.
+
+might go with sanity since I have practice on it.
+
+i also have to watch the youtube video that does this loll.
+
+### Prettier Setup + tailwind
+
+I remembered how to use this finally, i'm getting the hang of it.
+I also realized I take my tooling very seriously and I like to communicate the thought process on each and every step possible
+
+I also formatted the entire `next-portfolio` project yeesh
+
+but i ran the dev and it works so oh well.

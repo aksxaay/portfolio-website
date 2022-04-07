@@ -1,25 +1,28 @@
 // data for the smooth sunburst chart
 export default {
-  name: "Operation Summary",
+  name: 'Operation Summary',
   children: [
     {
-      name: "Running",
+      name: 'Running',
       children: [
         {
-          name: "Alarm",
-          children: [{ name: "Low", size: 89 }, { name: "Medium", size: 10 }]
+          name: 'Alarm',
+          children: [
+            { name: 'Low', size: 89 },
+            { name: 'Medium', size: 10 },
+          ],
         },
-        { name: "Operational", size: 63 },
-        { name: "Stand-by", size: 18 }
-      ]
+        { name: 'Operational', size: 63 },
+        { name: 'Stand-by', size: 18 },
+      ],
     },
     {
-      name: "Stopped",
+      name: 'Stopped',
       children: [
-        { name: "Fault", size: 10 },
-        { name: "Maintenence", size: 2 },
-        { name: "Alarm", children: [{ name: "Hight", size: 2 }] }
-      ]
-    }
-  ]
-};
+        { name: 'Fault', size: 10 },
+        { name: 'Maintenence', size: 2 },
+        { name: 'Alarm', children: [{ name: 'Hight', size: 2 }] },
+      ],
+    },
+  ],
+}
