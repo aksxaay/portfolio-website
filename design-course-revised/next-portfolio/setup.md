@@ -210,3 +210,5 @@ I also realized I take my tooling very seriously and I like to communicate the t
 I also formatted the entire `next-portfolio` project yeesh
 
 but i ran the dev and it works so oh well.
+
+installed sanity locally ez ez clap
