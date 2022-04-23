@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { sanityClient, urlFor } from '../sanity'
 
 function Work() {
   return (
@@ -14,6 +15,14 @@ function Work() {
         </p>
 
         <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {/* {posts.map((post) => (
+            <img
+              src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+              className="h-36 w-full transform bg-nav object-cover
+					transition duration-500 hover:scale-105 lg:h-72"
+            />
+          ))} */}
+
           <img
             src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
             className="h-36 w-full transform bg-nav object-cover
@@ -37,6 +46,33 @@ function Work() {
       </section>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  // It's important to default the slug so that it doesn't return "undefined"
+  const { slug = '' } = context.params
+  const post = await client.fetch(
+    `
+    *[_type == "post" && slug.current == $slug][0]{
+      _id,
+      title,
+      
+    },
+    author-> {
+      _id,
+      name,
+      slug {
+      current
+    },
+    },
+  `,
+    { slug }
+  )
+  return {
+    props: {
+      post,
+    },
+  }
 }
 
 export default Work

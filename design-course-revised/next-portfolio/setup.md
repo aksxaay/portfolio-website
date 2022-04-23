@@ -212,3 +212,10 @@ I also formatted the entire `next-portfolio` project yeesh
 but i ran the dev and it works so oh well.
 
 installed sanity locally ez ez clap
+
+```
+"@sanity/cli": "^2.29.3",
+"@sanity/client": "^3.3.0",
+"@sanity/image-url": "^1.0.1",
+"next-sanity": "^0.5.2",
+```
